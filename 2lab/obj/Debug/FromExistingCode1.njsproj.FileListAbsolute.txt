@@ -1,0 +1,3 @@
+D:\Education\IP_BACK\Back-end\PI21_Demyanchuk_Alesya_lab_02\obj\Debug\FromExistingCode1.njsproj.AssemblyReference.cache
+D:\Education\IP_BACK\Back-end\PI21_Demyanchuk_Alesya_lab_02\obj\Debug\FromExistingCode1.njsproj.CoreCompileInputs.cache
+D:\Education\IP_BACK\Back-end\PI21_Demyanchuk_Alesya_lab_02\bin\Microsoft.NodejsTools.WebRole.dll

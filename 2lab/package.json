@@ -1,0 +1,16 @@
+{
+  "name": "2lab",
+  "version": "1.0.0",
+  "description": "* Создаю в VS проект и устанавливаю соответсвующие модули для удобства работы с БД.\r * Создаю базу данных, используя pgAdmin4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vova",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "pg": "^8.6.0"
+  }
+}

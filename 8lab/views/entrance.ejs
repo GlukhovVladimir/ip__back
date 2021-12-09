@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <script>
+    async function tryEnter() {
+      const userName = document.getElementById("userName").value;
+      console.log("userName: ", userName);
+      if (!userName) {
+        alert("Enter your name");
+        return;
+      }
+
+      try {
+        let response = await fetch(
+          "http://localhost:5000/enter?userName=" + userName
+        );
+        console.log("response.body: ", response.body);
+        if (!response.ok) {
+          if (response.status == 409) {
+            alert("Such user already exists");
+          } else {
+            alert(
+              "Ошибка HTTP: " +
+                response.status +
+                "\n" +
+                response.statusText +
+                "\n" +
+                response.body
+            );
+          }
+        } else {
+          window.location.replace(
+            "http://localhost:5000/chats?userName=" + userName
+          );
+        }
+      } catch (e) {
+        alert("Ошибка " + e);
+      }
+    }
+  </script>
+  <body>
+    <div class="container">
+      <h1>Welcome!</h1>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Enter your name</h5>
+          <input class="input_text" type="text" id="userName" />
+          <button class="btn btn-primary" onclick="tryEnter()">Go</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

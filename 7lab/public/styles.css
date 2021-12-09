@@ -1,0 +1,23 @@
+.download, .upload {
+    margin-top: 5%;
+    border-collapse: separate;
+    border-spacing: 0 50px;
+}
+
+.response {
+    margin-top: 20%;
+    font-size: 225%;
+}
+
+label {
+    font-size: 125% !important;
+}
+
+.main, .FoldersAndFiles, .info {
+    margin-top: 5%;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 7px 11px;
+}
